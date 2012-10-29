@@ -57,6 +57,13 @@ First load the database as read-only::
 
     >>> dataset = bdp.DataSet()
 
+    
+The first time you open the InsterumentedBicycleData file, the taskSignal table does not exist it it. Thus you need
+to run the following once off to make sure that it is created::
+	>>>dataset.open(mode='a')
+	>>>dataset.create_task_table()
+It only has to be performed once.
+
 Now load a run::
 
     >>> run = bdp.Run('00105', dataset, filterSigs=True)
