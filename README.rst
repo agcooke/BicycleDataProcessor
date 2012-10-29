@@ -45,7 +45,7 @@ ready for use.::
 
    $ bzip2 -d InstrumentedBicycleData.h5.bz2
 
-Now edit ``defaults.cfg`` and change ``pathToDatabase`` and
+Now copy ``defaults-example.cfg`` to ``defaults.cfg``,edit ``defaults.cfg`` and change ``pathToDatabase`` and
 ``pathToParameters`` to point to the downloaded and unzipped database file and
 the ``BicycleParameters`` data folder, respectively.
 
