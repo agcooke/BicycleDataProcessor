@@ -28,6 +28,26 @@ likely work with other versions.
 .. __: http://pypi.python.org/pypi/BicycleParameters
 - `DynamicistToolKit 0.1.0dev`__
 .. __: https://github.com/moorepants/DynamicistToolKit
+- `Yeadon `__
+.. __: https://github.com/fitze/yeadon.git
+
+Installation:
+=================
+Linux:
+------
++ Install all dependencies using PIP.
++ SciPy must be installed from their website.
++ Look at the dependencies for Yeadon, DynamicistToolKit and BicycleParameters to
+get all the other packages installed.
+
+Windows:
+--------
++ Install (latest PYTHONXY binary) [http://code.google.com/p/pythonxy/]
++ Install vPython [http://www.vpython.org/] - Yeadon needs it.
++ Get pip installed, which is used to install other required Python packages:
+     $ easy_install pip
+     $ pip install uncertainties #For example.
+
 
 Usage
 =====
@@ -58,7 +78,7 @@ First load the database as read-only::
     >>> dataset = bdp.DataSet()
 
     
-The first time you open the InsterumentedBicycleData file, the taskTable table does not exist it it. Thus you need
+The first time you open the InstrumentedBicycleData.h5 file, the taskTable table does not exist it it. Thus you need
 to run the following once off to make sure that it is created::
 	>>>dataset.open(mode='a')
 	>>>dataset.create_task_table()
